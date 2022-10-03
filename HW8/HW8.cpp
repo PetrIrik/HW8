@@ -41,11 +41,13 @@ int main()
 	catch (const Ex& ex)
 	{
 		std::cerr << "Возникла ошибка: Ex с параметром (" << ex.what() << ")" << std::endl;
+		std::cerr << "Нажмите клавишу =) " << std::endl;
 		_getch();
 	}
 	catch (...)
 	{
 		std::cerr << "Возникла не известная ошибка!" << std::endl;
+		std::cerr << "Нажмите клавишу =) " << std::endl;
 		_getch();
 	}
 
@@ -87,16 +89,19 @@ int main()
 		catch (const OffTheField& ex)
 		{
 			std::cerr << "Попытка выхода за пределы поля! " << ex.what() << std::endl;
+			std::cerr << "Нажмите клавишу =) " << std::endl;
 			_getch();
 		}
 		catch (const IllegalCommand& ex)
 		{
 			std::cerr << "Указано неизвестное направление!" << std::endl;
+			std::cerr << "Нажмите клавишу =) " << std::endl;
 			_getch();
 		}
 		catch (...)
 		{
 			std::cerr << "Неизвестная ошибка!" << std::endl;
+			std::cerr << "Нажмите клавишу =) " << std::endl;
 			_getch();
 		}
 	} while (c != 'x' && c != 'X');
